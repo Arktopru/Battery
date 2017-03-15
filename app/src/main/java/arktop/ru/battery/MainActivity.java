@@ -17,6 +17,12 @@ public class MainActivity extends AppCompatActivity {
     private TextView chargeSource;
     private TextView batteryVoltage;
     private TextView batteryTemperature;
+    private TextView batteryWarnings;
+    private TextView currentNow;
+    private TextView currentAverage;
+    private TextView chargeCount;
+    private TextView energyCount;
+    private TextView capacity;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -29,6 +35,39 @@ public class MainActivity extends AppCompatActivity {
         chargeSource = (TextView) findViewById(R.id.chargeSource);
         batteryVoltage = (TextView) findViewById(R.id.batteryVoltage);
         batteryTemperature = (TextView) findViewById(R.id.batteryTemperature);
+        batteryWarnings = (TextView) findViewById(R.id.batteryWarnings);
+        currentNow = (TextView) findViewById(R.id.currentNow);
+        currentAverage = (TextView) findViewById(R.id.currentAverage);
+        chargeCount = (TextView) findViewById(R.id.chargeCount);
+        energyCount = (TextView) findViewById(R.id.energyCount);
+        capacity = (TextView) findViewById(R.id.capacity);
+    }
+
+
+    public void setChargeCount(String count){
+        chargeCount.setText(count);
+    }
+
+
+    public void setEnergyCount(String count){
+        energyCount.setText(count);
+    }
+
+
+    public void setCapacity(String cap){
+        capacity.setText(cap);
+    }
+
+    public void setcurrentNow(String current){
+        currentNow.setText(current);
+    }
+
+    public void setcurrentAverage(String current){
+        currentAverage.setText(current);
+    }
+
+    public void setBatteryWarnings(String warning){
+        batteryWarnings.setText(warning);
     }
 
     public void setChargeStatus(String status) {

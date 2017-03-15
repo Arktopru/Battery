@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="arktop.ru.batteryinfo.MainActivity">
+    tools:context="arktop.ru.battery.MainActivity">
 
 
     <TableLayout
@@ -14,17 +14,24 @@
         android:paddingLeft="12dp"
         android:paddingTop="16dp">
 
-        <TableRow >
+        <TableRow>
 
             <TextView
-                android:layout_span="2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:gravity="center"
-                android:text="Подробности о батарее"
-                android:textSize="22sp" />
+                android:layout_gravity="right"
+                android:text="Предупреждения"
+                android:textSize="18sp" />
 
+            <TextView
+                android:id="@+id/batteryWarnings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/table_padding"
+                android:text="нет"
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow>
@@ -110,16 +117,116 @@
 
         <TableRow>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Темп., C"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/batteryTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/table_padding"
+            android:text="00.0"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </TableRow>
+        <TableRow>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:text="Темп., C"
+                android:text="Ток, мкА"
                 android:textAlignment="center"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/batteryTemperature"
+                android:id="@+id/currentNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/table_padding"
+                android:text="00.0"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Средний ток, мкА"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/currentAverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/table_padding"
+            android:text="00.0"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Емкость, мкА*ч"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/chargeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/table_padding"
+                android:text="00.0"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Мощность, нВатт*ч"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/energyCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/table_padding"
+                android:text="00.0"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Осталось зар., %"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/capacity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
