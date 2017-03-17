@@ -5,9 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.BatteryManager;
 
-import static android.os.BatteryManager.BATTERY_PLUGGED_AC;
-import static android.os.BatteryManager.BATTERY_PLUGGED_USB;
-
 public class InfoReceiver extends BroadcastReceiver {
 
     @Override
@@ -48,15 +45,15 @@ public class InfoReceiver extends BroadcastReceiver {
 
             switch (status) {
                 case BatteryManager.BATTERY_HEALTH_UNKNOWN:
-                    activity.setBatteryWarnings("Сотояние бат. не распознано!");
+                    activity.setBatteryWarnings("Сотояние бат. не распознано");
                     break;
 
                 case BatteryManager.BATTERY_HEALTH_GOOD:
-                    activity.setBatteryWarnings("Батарея в порядке!");
+                    activity.setBatteryWarnings("Батарея в порядке");
                     break;
 
                 case BatteryManager.BATTERY_HEALTH_OVERHEAT:
-                    activity.setBatteryWarnings("Батарея пергрета!");
+                    activity.setBatteryWarnings("Батарея пергрета");
                     break;
 
                 case BatteryManager.BATTERY_HEALTH_DEAD:
@@ -64,7 +61,7 @@ public class InfoReceiver extends BroadcastReceiver {
                     break;
 
                 case BatteryManager.BATTERY_HEALTH_OVER_VOLTAGE:
-                    activity.setBatteryWarnings("Батарея перезаряжена!");
+                    activity.setBatteryWarnings("Батарея перезаряжена");
                     break;
 
                 case BatteryManager.BATTERY_HEALTH_UNSPECIFIED_FAILURE:
@@ -94,17 +91,17 @@ public class InfoReceiver extends BroadcastReceiver {
             BatteryManager mBatteryManager = (BatteryManager) activity.getSystemService(Context.BATTERY_SERVICE);
 
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                activity.setcurrentNow("" + mBatteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CURRENT_AVERAGE));
-                activity.setcurrentAverage("" + mBatteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CURRENT_NOW));
-                activity.setChargeCount("" + mBatteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CHARGE_COUNTER));
+                activity.setCurrentNow("" + mBatteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CURRENT_AVERAGE) / 1000);
+                activity.setCurrentAverage("" + mBatteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CURRENT_NOW) / 1000);
+                activity.setChargeCount("" + mBatteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CHARGE_COUNTER) / 1000);
                 activity.setEnergyCount("" + mBatteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_ENERGY_COUNTER));
                 activity.setCapacity("" + mBatteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY));
             } else {
-                activity.setcurrentNow("Не поддерживатеся");
-                activity.setcurrentAverage("Не поддерживается");
-                activity.setChargeCount("Не поддерживатеся");
-                activity.setEnergyCount("Не поддерживатеся");
-                activity.setCapacity("Не поддерживатеся");
+                activity.setCurrentNow("");
+                activity.setCurrentAverage("");
+                activity.setChargeCount("");
+                activity.setEnergyCount("");
+                activity.setCapacity("");
             }
 
 

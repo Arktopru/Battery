@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--
-    Refer to App Widget Documentation for margin information
-    http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
-    -->
     <dimen name="widget_margin">8dp</dimen>
     <dimen name="table_padding">12dp</dimen>
-    <dimen name="gauges_margin_left">35dp</dimen>
+    <dimen name="gauges_margin_left">32dp</dimen>
     <dimen name="gauges_padding_top">10dp</dimen>
     <dimen name="gauge_width">165dp</dimen>
     <dimen name="gauge_height">150dp</dimen>
-    <dimen name="main_padding_top">160dp</dimen>
+    <dimen name="main_padding_top">170dp</dimen>
     <dimen name="main_margin_left">20dp</dimen>
     <dimen name="gauge_phisical_width">300dp</dimen>
     <dimen name="gauge_phisical_height">250dp</dimen>
-
 </resources>

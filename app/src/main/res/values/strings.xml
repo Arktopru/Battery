@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Батарея</string>
+    <string name="charge_source_text"><![CDATA[Источн. заряда: <0>]]></string>
+    <string name="battery_temperature_text"><![CDATA[Температура батареи: <0> C]]></string>
+    <string name="current_now_text"><![CDATA[Ток: <0> мА]]></string>
+    <string name="current_average_text"><![CDATA[Средний ток: <0> мА]]></string>
+    <string name="charge_count_text"><![CDATA[Емкость: <0> мА*ч]]></string>
+    <string name="energy_count_text"><![CDATA[Мощность: <0> нВатт*ч]]></string>
+    <string name="capacity_text"><![CDATA[Осталось зарда: <0> %]]></string>
 </resources>
